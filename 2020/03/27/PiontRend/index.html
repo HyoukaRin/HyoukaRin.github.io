@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Map," />
+  <meta name="keywords" content="Rendering,Computer Vision,Paper Reivew," />
 
 
 
@@ -79,17 +79,24 @@
 
 
 
-<meta name="description" content="欢迎来到HyoukaRin的blog！我并不是什么有名的人，且不比那些网红，即便是在中学，大学，计算机系的范围来看，我也是那种最默默无闻，拿了奖新闻里也不会出现名字的那种人（小鸨看了不要在意，joking），因此，即便这篇博客可以被全世界拥有网络连接的人看到，真正访问这片土地的人应该都是Rin的朋友，所谓自己人。 既然是自己人，那么这篇blog里面基本也没啥不能写的，要是哪天你们的朋友真的出名了，">
+<meta name="description" content="这是一篇Paper Review刚刚看完optix的第一个实例，本来今天应该补昨天要写的关于pytorch-based ray tracing和SSGI的东西的，但是那些玩意的篇幅太长了，而且那个SSGI的效果也实在是奇怪，简直就是不靠谱中的不靠谱 离我老哥来接我吃饭还有些时间，我现在也不想看optix中cuda代码的部分，一般通过DD还在沉迷用c写c++，giria还不愿理我（joking，gi">
 <meta property="og:type" content="article">
-<meta property="og:title" content="写在最前面的话">
-<meta property="og:url" content="http://yoursite.com/2020/03/18/readme/index.html">
+<meta property="og:title" content="PiontRend">
+<meta property="og:url" content="http://yoursite.com/2020/03/27/PiontRend/index.html">
 <meta property="og:site_name" content="The Human Comedy">
-<meta property="og:description" content="欢迎来到HyoukaRin的blog！我并不是什么有名的人，且不比那些网红，即便是在中学，大学，计算机系的范围来看，我也是那种最默默无闻，拿了奖新闻里也不会出现名字的那种人（小鸨看了不要在意，joking），因此，即便这篇博客可以被全世界拥有网络连接的人看到，真正访问这片土地的人应该都是Rin的朋友，所谓自己人。 既然是自己人，那么这篇blog里面基本也没啥不能写的，要是哪天你们的朋友真的出名了，">
-<meta property="article:published_time" content="2020-03-18T14:58:11.000Z">
-<meta property="article:modified_time" content="2020-03-18T15:57:37.116Z">
+<meta property="og:description" content="这是一篇Paper Review刚刚看完optix的第一个实例，本来今天应该补昨天要写的关于pytorch-based ray tracing和SSGI的东西的，但是那些玩意的篇幅太长了，而且那个SSGI的效果也实在是奇怪，简直就是不靠谱中的不靠谱 离我老哥来接我吃饭还有些时间，我现在也不想看optix中cuda代码的部分，一般通过DD还在沉迷用c写c++，giria还不愿理我（joking，gi">
+<meta property="og:image" content="http://yoursite.com/images/PointRend/1.png">
+<meta property="og:image" content="http://yoursite.com/images/PointRend/2.png">
+<meta property="og:image" content="http://yoursite.com/images/PointRend/3.png">
+<meta property="og:image" content="http://yoursite.com/images/PointRend/4.png">
+<meta property="article:published_time" content="2020-03-27T08:57:06.000Z">
+<meta property="article:modified_time" content="2020-03-27T18:24:40.731Z">
 <meta property="article:author" content="HyoukaRin">
-<meta property="article:tag" content="Map">
+<meta property="article:tag" content="Rendering">
+<meta property="article:tag" content="Computer Vision">
+<meta property="article:tag" content="Paper Reivew">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/images/PointRend/1.png">
 
 
 
@@ -119,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/03/18/readme/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/03/27/PiontRend/"/>
 
 
 
 
 
-  <title>写在最前面的话 | The Human Comedy</title>
+  <title>PiontRend | The Human Comedy</title>
   
 
 
@@ -252,7 +259,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/18/readme/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/27/PiontRend/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="HyoukaRin">
@@ -269,7 +276,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">写在最前面的话</h1>
+          <h1 class="post-title" itemprop="name headline">PiontRend</h1>
         
 
         <div class="post-meta">
@@ -281,8 +288,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-03-18T22:58:11+08:00">
-                2020-03-18
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-03-27T16:57:06+08:00">
+                2020-03-27
               </time>
             
 
@@ -304,8 +311,30 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Basic/" itemprop="url" rel="index">
-                    <span itemprop="name">Basic</span>
+                  <a href="/categories/Computer-Science/" itemprop="url" rel="index">
+                    <span itemprop="name">Computer Science</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Computer-Science/Computer-Vision/" itemprop="url" rel="index">
+                    <span itemprop="name">Computer Vision</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Computer-Science/Computer-Vision/3Dvision/" itemprop="url" rel="index">
+                    <span itemprop="name">3Dvision</span>
                   </a>
                 </span>
 
@@ -341,30 +370,42 @@
       
 
       
-        <h1 id="欢迎来到HyoukaRin的blog！"><a href="#欢迎来到HyoukaRin的blog！" class="headerlink" title="欢迎来到HyoukaRin的blog！"></a>欢迎来到HyoukaRin的blog！</h1><p>我并不是什么有名的人，且不比那些网红，即便是在中学，大学，计算机系的范围来看，我也是那种最默默无闻，拿了奖新闻里也不会出现名字的那种人（小鸨看了不要在意，joking），因此，即便这篇博客可以被全世界拥有网络连接的人看到，真正访问这片土地的人应该都是Rin的朋友，所谓自己人。</p>
-<p>既然是自己人，那么这篇blog里面基本也没啥不能写的，要是哪天你们的朋友真的出名了，或者这篇blog里面的技术性教程不小心被人看到，又不小心火了，那时候，我应该会把这里面所有personal的东西统统删掉，所以我千万不要出名，诸君且看且珍惜。</p>
-<p>如果事情进展顺利，这个blog还会与一个网站产生关联，在那里，你应该可以找到一些好玩的东西。</p>
-<p>希望通过这个blog，你可以找到一些喜欢的东西。</p>
-<h1 id="This-blog-is-about"><a href="#This-blog-is-about" class="headerlink" title="This blog is about"></a>This blog is about</h1><h2 id="Computer-Science"><a href="#Computer-Science" class="headerlink" title="Computer Science"></a>Computer Science</h2><p>这部分内容一般将通过paper review和experiment的方式展现，包括但不限于</p>
+        <h1 id="这是一篇Paper-Review"><a href="#这是一篇Paper-Review" class="headerlink" title="这是一篇Paper Review"></a>这是一篇Paper Review</h1><p>刚刚看完optix的第一个实例，本来今天应该补昨天要写的关于pytorch-based ray tracing和SSGI的东西的，但是那些玩意的篇幅太长了，而且那个SSGI的效果也实在是奇怪，简直就是不靠谱中的不靠谱</p>
+<p>离我老哥来接我吃饭还有些时间，我现在也不想看optix中cuda代码的部分，一般通过DD还在沉迷用c写c++，giria还不愿理我（joking，giria看到了不要在意），此所谓最为百无聊赖的下午，索性随便谈谈昨天看完的论文PointRend</p>
+<h1 id="PointRend"><a href="#PointRend" class="headerlink" title="PointRend"></a>PointRend</h1><p>kaiming老兄弄出的东西一般来说有点意思，结果非常符合何老兄的论文风格，整篇论文一个公式都懒得写，最关键的部分放到experiment部分来讲</p>
+<p>说些题外话，最近也开始读一些render的论文，发现其风格与AI论文完全大相径庭，读完AI的论文，再去看render，发现AI的论文绝对是工业化的结果，结构清晰，用词统一标准，重点和水字数的部分一目了然，AI产业一年算上被拒的文章，产量绝对数以十万计，尽管这些年有些人说AI发现瓶颈云云，看来也未必正确</p>
+<h1 id="Related-Work"><a href="#Related-Work" class="headerlink" title="Related Work"></a>Related Work</h1><h2 id="频率与采样"><a href="#频率与采样" class="headerlink" title="频率与采样"></a>频率与采样</h2><p>顺便把今天看的关于频域和时域的内容总结了</p>
+<p>所谓的render可以认为是一个对于渲染函数sample的过程，既然所有函数都可以傅里叶展开，那么一个函数就可以分成线性可加的高频和低频部分，渲染函数也不例外。对于成像，我们只能对于屏幕空间平均地产生有限的sample，这势必导致对图像低频区域的过采样（无效采样）和高频部分的欠采样</p>
+<p>对于渲染任务，这将主要产生锯齿的效果，学名走样（aliasing），图形学在旷日持久的反走样（anti-aliasing）斗争中，发现了这样一些方法</p>
 <ul>
-<li><p>Computer Vision</p>
+<li><p>更多的采样（SSAA）</p>
 </li>
-<li><p>Natural Language Processing </p>
+<li><p>将高频信息滤波，然后直接采样（MSAA）</p>
 </li>
-<li><p>Reinforcement Learning</p>
-</li>
-<li><p>Graph Neural Network</p>
-</li>
-<li><p>Generative Model</p>
-</li>
-<li><p>Rendering</p>
+<li><p>歪门邪道（FXAA）</p>
 </li>
 </ul>
-<h2 id="Statistics"><a href="#Statistics" class="headerlink" title="Statistics"></a>Statistics</h2><p>把这部分内容称为stat似乎有些冒犯，但是称为traditional machine learning似乎也并不合适，总之，这些天的实验让我深刻认识到自己的内力不足，如果我有空的话，我将系统地学习ESL或者PRML，并参加传统机器学习的比赛。</p>
-<p>这部分内容将通过读后感和技术报告的形式展现</p>
-<h2 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h2><p>音乐好听，动漫，电影，小说好看，哲学与社会学发人深省，还有好玩的游戏，总是在qq空间发安利总显得有些low，况且吃的人也不会太多，索性放到blog上。</p>
-<p>我自以为没有什么创作的天赋，初中时以为自己是文艺少年，事到如今，即便是写出来的技术报告也要遭到队友对于语法的吐槽，画画唱歌弹琴就更别提了。但是，我觉得我看东西的眼光应该还算可以，如果可以成为一个不算糟糕的读者，对于作家应该也算是一种贡献吧。</p>
-<h2 id="Personal-Thoughts"><a href="#Personal-Thoughts" class="headerlink" title="Personal Thoughts"></a>Personal Thoughts</h2><p>我应该不会经常更新personal thoughts的内容，如果哪天你发现我频繁更新personal thoughts的内容，那一般说明你的朋友脑子瓦特了，请稍微关心一下他，免得他继续胡言乱语。</p>
+<h2 id="语义分割"><a href="#语义分割" class="headerlink" title="语义分割"></a>语义分割</h2><p>现在已经凌晨一点三十分了，我突然间理解了老博士所谓“博士是不可能在凌晨三点前睡觉”这句话的含义了，想到PDD还在努力地为编译原理的作业奋斗那么我无论如何也应该把这个坑填完</p>
+<p>先上张图片，毕竟不能假设所有的读者都知道语义分割(图片随便找的，看得懂就行)</p>
+<p><img src="/images/PointRend/1.png" alt=""></p>
+<p>可以很清楚地看见，图片由原本的rgb图片转换成了具有实际语义的各种语义块，比如地面，车辆，行人，建筑，天空等，成功的语义分割对于一些应用具有非常重要的意义，比如无人驾驶等</p>
+<p>（这几天在看康德，突然觉得语义分割是不是对应康德先验知性的部分，将不同的感觉组合对于一个物体知觉，之类的）</p>
+<p>那么，一个神经网络是如何完成语义分割的过程的呢，语义分割的网络结构有很多种，其中，最广为大家所喜爱的应该是U-net</p>
+<p><img src="/images/PointRend/2.png" alt=""></p>
+<p>从卷积神经网络开始讲这个玩意并不现实，对于以前没了解过U-net的同学们来说，可以把这个网络看成两个过程，一个过程，提取图像中包含的关键信息（在rendering中，关键信息就可能是一个mesh的位置，法向，光照等等），而在后半部分进行上采样，把预测的结果（图片）拉大，最后形成输出</p>
+<h1 id="Key-Contribution"><a href="#Key-Contribution" class="headerlink" title="Key Contribution"></a>Key Contribution</h1><p>那么，PointRend的关键贡献就在于，他们将一般的神经网络的预测过程看做一个渲染的流程，渲染中，我们通过场景的一些关键信息来绘制图片，而对于神经网络来说，我们可以将后半部分看成对于结果的渲染，而素材则是神经网络所提取的特征，在这一过程中，我们用到了上采样</p>
+<p>既然出现了上采样，那么就不可避免的将会出现过采样和欠采样的问题，我们往往对于一个图片的低频部分过采样，浪费了大量的计算，而对于边缘一类的高频区域欠采样，造成边缘的模糊特性。</p>
+<p><img src="/images/PointRend/3.png" alt=""></p>
+<p>看这张图，Mask R-CNN对于网球运动员手的那部分分割其实就相当失败，出现了过于模糊的特征</p>
+<p>那么，我们应该如何解决这一问题呢，答案同样来自于图形学：在每一个上采样的过程中，区别对待图像的高频和低频区域，对于高频区域，我们使用更多的点进行采样，对于低频区域，我们使用更少的点进行采样</p>
+<p><img src="/images/PointRend/4.png" alt=""></p>
+<p>看图就明白了，我们为了完成这个biased的采样，我们只需要一个判断该像素是否处于高频区域的判断标准，就可以完成这一个采样过程，我们可以使用一个单独的神经网络对这些采样到的点进行预测，而对于其他点直接进行插值拉大，这样既解决了低频区域计算量浪费的问题，也解决了高频区域预测困难的问题</p>
+<p>想得很美，对吧</p>
+<h1 id="尾声"><a href="#尾声" class="headerlink" title="尾声"></a>尾声</h1><p>一个好的idea并不意味的好的实验，况且这个实验还涉及到神经网络中实时的sample，在DL领域算是难写的代码之一了，本打算自己去看代码实验的，但是实在是没空，只能交给好兄弟Ebifly了，希望他可以在打两份工的同时把实验做了，我毕竟还有optix和调参的工作要做</p>
+<p>其实，如果这个网络真有他们说的那么好，那么放到语义分割上可能真的屈才了，毕竟，图像模糊的问题在不少视觉领域都有出现，甚至可能是一个基本的问题</p>
+<p>写技术blog真的不怎么容易，现在已经凌晨两点多了，祝PDD编译原理接口编写顺利，欧亚斯密</p>
+<p>这几天忙得累的一比，经常坐在椅子上，看一下QQ，下一秒就不知道自己要干啥</p>
+<p>明天星期六了，后天还有傻逼的面试和笔试，好想跟giria出去吃烧烤啊，啥都不说，猛吃烧烤</p>
 
       
     </div>
@@ -382,7 +423,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Map/" rel="tag"># Map</a>
+            <a href="/tags/Rendering/" rel="tag"># Rendering</a>
+          
+            <a href="/tags/Computer-Vision/" rel="tag"># Computer Vision</a>
+          
+            <a href="/tags/Paper-Reivew/" rel="tag"># Paper Reivew</a>
           
         </div>
       
@@ -395,8 +440,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/03/18/The%20Human%20Comedy/" rel="next" title="人间喜剧">
-                <i class="fa fa-chevron-left"></i> 人间喜剧
+              <a href="/2020/03/23/interview2/" rel="next" title="面试2">
+                <i class="fa fa-chevron-left"></i> 面试2
               </a>
             
           </div>
@@ -404,10 +449,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/03/21/invaded/" rel="prev" title="invaded">
-                invaded <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -539,7 +580,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#欢迎来到HyoukaRin的blog！"><span class="nav-number">1.</span> <span class="nav-text">欢迎来到HyoukaRin的blog！</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#This-blog-is-about"><span class="nav-number">2.</span> <span class="nav-text">This blog is about</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Computer-Science"><span class="nav-number">2.1.</span> <span class="nav-text">Computer Science</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Statistics"><span class="nav-number">2.2.</span> <span class="nav-text">Statistics</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Review"><span class="nav-number">2.3.</span> <span class="nav-text">Review</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Personal-Thoughts"><span class="nav-number">2.4.</span> <span class="nav-text">Personal Thoughts</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#这是一篇Paper-Review"><span class="nav-number">1.</span> <span class="nav-text">这是一篇Paper Review</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#PointRend"><span class="nav-number">2.</span> <span class="nav-text">PointRend</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Related-Work"><span class="nav-number">3.</span> <span class="nav-text">Related Work</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#频率与采样"><span class="nav-number">3.1.</span> <span class="nav-text">频率与采样</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#语义分割"><span class="nav-number">3.2.</span> <span class="nav-text">语义分割</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Key-Contribution"><span class="nav-number">4.</span> <span class="nav-text">Key Contribution</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#尾声"><span class="nav-number">5.</span> <span class="nav-text">尾声</span></a></li></ol></div>
             
 
           </div>
