@@ -764,8 +764,8 @@
 <!-- LOCAL: You can save these files to your site and update links -->
     
         
-        <link rel="stylesheet" href="https://billts.site/extra_css/gitment.css">
-        <script src="https://billts.site/js/gitment.js"></script>
+		<link rel="stylesheet" href="https://billts.site/extra_css/gitment.css">
+		<script src="https://billts.site/js/gitment.js"></script>
     
 <!-- END LOCAL -->
 
@@ -775,11 +775,19 @@
       <script type="text/javascript">
       function renderGitment(){
         var gitment = new Gitment({
--           id: window.location.pathname,
-+           id: '1584933139000',
+            id: window.location.pathname, 
             owner: 'hyoukarin',
             repo: 'hyoukarin.github.io# MUST HAVE, The repo you use to store Gitment comments',
             
+            oauth: {
+            
+            
+                client_secret: '41479ea37bb3777b1145fbaabc0ed5f58882b434',
+            
+                client_id: '14305b1bb23b6c046967'
+            }});
+        gitment.render('gitment-container');
+      }
 
       
       renderGitment();
