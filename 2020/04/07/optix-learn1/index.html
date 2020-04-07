@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Rendering,tutorial," />
 
 
 
@@ -79,16 +79,20 @@
 
 
 
-<meta name="description" content="测试这篇blog被用来测试comment是否可以正常使用，如果不行，Rin目前好像也没有什么其它办法的样子，毕竟无法定位错误原因（一个报错对应多种错误可能性真是太tm搞了）">
+<meta name="description" content="Optix教程零之前写pytorch光追的时候就一直欠着一篇tutorial，后来又有Reflective Shadow Map,再到Optix，反正关于渲染的内容是一拖再拖，直到现在 至于现在为什么突然想起来写，大概是因为之前一直写论文写到三点，以至于现在的我在凌晨完全睡不着，再加上糟糕的maven不知道在装些什么环境，实在不放心让它就这样悄无身息地跑下去，只好靠写blog打发时间 我一直在思考">
 <meta property="og:type" content="article">
-<meta property="og:title" content="comment_test">
-<meta property="og:url" content="http://yoursite.com/2020/03/30/comment-test/index.html">
+<meta property="og:title" content="optix_learn1">
+<meta property="og:url" content="http://yoursite.com/2020/04/07/optix-learn1/index.html">
 <meta property="og:site_name" content="The Human Comedy">
-<meta property="og:description" content="测试这篇blog被用来测试comment是否可以正常使用，如果不行，Rin目前好像也没有什么其它办法的样子，毕竟无法定位错误原因（一个报错对应多种错误可能性真是太tm搞了）">
-<meta property="article:published_time" content="2020-03-30T08:07:32.000Z">
-<meta property="article:modified_time" content="2020-03-30T08:08:59.327Z">
+<meta property="og:description" content="Optix教程零之前写pytorch光追的时候就一直欠着一篇tutorial，后来又有Reflective Shadow Map,再到Optix，反正关于渲染的内容是一拖再拖，直到现在 至于现在为什么突然想起来写，大概是因为之前一直写论文写到三点，以至于现在的我在凌晨完全睡不着，再加上糟糕的maven不知道在装些什么环境，实在不放心让它就这样悄无身息地跑下去，只好靠写blog打发时间 我一直在思考">
+<meta property="og:image" content="http://yoursite.com/images/optix-learn1/1.png">
+<meta property="article:published_time" content="2020-04-07T14:32:34.000Z">
+<meta property="article:modified_time" content="2020-04-07T15:18:42.014Z">
 <meta property="article:author" content="HyoukaRin">
+<meta property="article:tag" content="Rendering">
+<meta property="article:tag" content="tutorial">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/images/optix-learn1/1.png">
 
 
 
@@ -118,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/03/30/comment-test/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/04/07/optix-learn1/"/>
 
 
 
 
 
-  <title>comment_test | The Human Comedy</title>
+  <title>optix_learn1 | The Human Comedy</title>
   
 
 
@@ -251,7 +255,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/30/comment-test/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/07/optix-learn1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="HyoukaRin">
@@ -268,7 +272,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">comment_test</h1>
+          <h1 class="post-title" itemprop="name headline">optix_learn1</h1>
         
 
         <div class="post-meta">
@@ -280,8 +284,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-03-30T16:07:32+08:00">
-                2020-03-30
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-07T22:32:34+08:00">
+                2020-04-07
               </time>
             
 
@@ -290,6 +294,50 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Computer-Science/" itemprop="url" rel="index">
+                    <span itemprop="name">Computer Science</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Computer-Science/Rendering/" itemprop="url" rel="index">
+                    <span itemprop="name">Rendering</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Computer-Science/Rendering/tutorial/" itemprop="url" rel="index">
+                    <span itemprop="name">tutorial</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -318,7 +366,23 @@
       
 
       
-        <h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><p>这篇blog被用来测试comment是否可以正常使用，如果不行，Rin目前好像也没有什么其它办法的样子，毕竟无法定位错误原因（一个报错对应多种错误可能性真是太tm搞了）</p>
+        <h1 id="Optix教程零"><a href="#Optix教程零" class="headerlink" title="Optix教程零"></a>Optix教程零</h1><p>之前写pytorch光追的时候就一直欠着一篇tutorial，后来又有Reflective Shadow Map,再到Optix，反正关于渲染的内容是一拖再拖，直到现在</p>
+<p>至于现在为什么突然想起来写，大概是因为之前一直写论文写到三点，以至于现在的我在凌晨完全睡不着，再加上糟糕的maven不知道在装些什么环境，实在不放心让它就这样悄无身息地跑下去，只好靠写blog打发时间</p>
+<p>我一直在思考这个blog到底可以给谁看，毕竟，如果我写篇optix的blog，所有会看我的blog的人中能够从中有所收益的应该只有PDD和Ebifly（谁叫他们跟我打一份工呢），又或者这份工作将成为某种藏在海底的宝藏，等以后我有了什么师弟师妹，可以给他们看看这个老掉牙的接口教程。</p>
+<p>不管怎么说，万事开头难，还是让我们从零开始吧<br>关于Optix<br>======<br>Optix是一个英伟达开发的实时光追渲染接口，使用Optix，你可以轻松地实现那些在opengl里面令人头疼却十分必要的特效，最简单的，比如说阴影，反射，多次间接光照等等，在实现这些效果之前，为了安装optix，你需要以下准备：</p>
+<ul>
+<li><p>一台拥有英伟达显卡的电脑（好歹是gtx10系列往上吧）</p>
+</li>
+<li><p>Windows或者Linux操作系统</p>
+</li>
+</ul>
+<p>然后，你需要去安装cuda10.0（看清版本号，这很重要，不是10.1或者10.2，尽管安装10.1或10.2可能并不会导致安装失败），为此，你可能还需要下载visual studio2017，cuda是老黄开发的一套gpu编程接口。所有的Optix的着色器程序（Shader）都是以cuda代码的形式编写的，拜伟大的Tensorflow和Pytorch所赐，网上有一堆安装cuda的教程，尽管配置环境是所有程序员最讨厌的事情，但是为了以后可以玩Animate Gan和Optix，大家还是忍一忍吧</p>
+<p>紧接着，如果你在命令行成功地敲出nvcc -V，看到并没有上面报错，说明你已经离成功很近了！至少接下来，你不需要配置任何环境变量</p>
+<p>再次打开老黄的官网，找到Optix6.50的下载包，打开下载的exe文件，全部按照默认选项一直猛点，最后，你可以在安装的位置找到一系列文件夹，大概像这样</p>
+<p><img src="/images/optix-learn1/1.png" alt=""></p>
+<p>打开SDK，里面有一个CMakeLists文件，在SDK中新建一个build文件夹，然后打开最新版的cmake，使用64位编译方式，你就可以用CMakeLists来编译这些文件了（不要管那些warning，那不重要），在你的build文件夹下，会有一个已经生成好，配置好各种环境变量的visual studio解决方案，在解决方案中随便挑一个运行，如果你看到了图片，那你就成功了！</p>
+<p>当然，也存在可以正常编译，运行，但是看不到图片的情况，这种情况，请检查你的显卡驱动：Optix需要最新的显卡驱动，以实现实时光追的硬件加速</p>
+<p>进行这一流程的好处在于，只要你成功地看到了图片，你以后就可以沿用这个解决方案的环境变量，总而言之，再也不用被环境变量的问题所困扰了！</p>
 
       
     </div>
@@ -334,6 +398,14 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Rendering/" rel="tag"># Rendering</a>
+          
+            <a href="/tags/tutorial/" rel="tag"># tutorial</a>
+          
+        </div>
+      
 
       
       
@@ -343,8 +415,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/03/27/PiontRend/" rel="next" title="PiontRend">
-                <i class="fa fa-chevron-left"></i> PiontRend
+              <a href="/2020/03/30/comment-test/" rel="next" title="comment_test">
+                <i class="fa fa-chevron-left"></i> comment_test
               </a>
             
           </div>
@@ -352,10 +424,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/04/07/optix-learn1/" rel="prev" title="optix_learn1">
-                optix_learn1 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -494,7 +562,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#测试"><span class="nav-number">1.</span> <span class="nav-text">测试</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Optix教程零"><span class="nav-number">1.</span> <span class="nav-text">Optix教程零</span></a></li></ol></div>
             
 
           </div>
@@ -694,7 +762,7 @@
       <script type="text/javascript">
       function renderGitment(){
         var gitment = new Gitment({
-            id: '1585555652000', 
+            id: '1586269954000', 
             owner: 'HyoukaRin',
             repo: 'blog-comments# MUST HAVE, The repo you use to store Gitment comments',
             
