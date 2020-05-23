@@ -79,14 +79,14 @@
 
 
 
-<meta name="description" content="这是一篇伪面经前些天TX一面的面试官来面我，我明明在简历上写满了CV和Rendering的项目经历，结果问了我二十分钟的c++&#x2F;系统&#x2F;基础数据结构和算法，而且面的时候双方还有语言障碍（C++的map能叫map吗？），然后那面试官居然给我过了，实在是大好人，我打心眼里感谢这位做技术的兄弟。今天就是二面了，我心想总不至于又来一个做技术的兄弟，我为数不多的c++&#x2F;系统的知识已经被第一个面试官面得差不多了">
+<meta name="description" content="也许这是真正意义上的面经本来早就该动笔写这篇“读后感”一般的面经，结果却一直缺少动笔的决心和理由，趁今天难得的早起教小学生的闲暇，况且pdd下周一还要接受tx变态面试官的面试，我决定把这个拖了有三个星期的坑填上 这次的面经将包含一些我总结出的“Golden Rule”，以及一些计算机，游戏渲染方面需要关注的点，以及一些关于面试的杂谈 Golden Rule反正看到这篇面经的都是自己人，名字叫得多大">
 <meta property="og:type" content="article">
 <meta property="og:title" content="面试2">
-<meta property="og:url" content="http://yoursite.com/2020/03/23/interview2/index.html">
+<meta property="og:url" content="http://yoursite.com/2020/03/23/interview3/index.html">
 <meta property="og:site_name" content="The Human Comedy">
-<meta property="og:description" content="这是一篇伪面经前些天TX一面的面试官来面我，我明明在简历上写满了CV和Rendering的项目经历，结果问了我二十分钟的c++&#x2F;系统&#x2F;基础数据结构和算法，而且面的时候双方还有语言障碍（C++的map能叫map吗？），然后那面试官居然给我过了，实在是大好人，我打心眼里感谢这位做技术的兄弟。今天就是二面了，我心想总不至于又来一个做技术的兄弟，我为数不多的c++&#x2F;系统的知识已经被第一个面试官面得差不多了">
+<meta property="og:description" content="也许这是真正意义上的面经本来早就该动笔写这篇“读后感”一般的面经，结果却一直缺少动笔的决心和理由，趁今天难得的早起教小学生的闲暇，况且pdd下周一还要接受tx变态面试官的面试，我决定把这个拖了有三个星期的坑填上 这次的面经将包含一些我总结出的“Golden Rule”，以及一些计算机，游戏渲染方面需要关注的点，以及一些关于面试的杂谈 Golden Rule反正看到这篇面经的都是自己人，名字叫得多大">
 <meta property="article:published_time" content="2020-03-23T03:12:19.000Z">
-<meta property="article:modified_time" content="2020-03-23T04:22:14.787Z">
+<meta property="article:modified_time" content="2020-05-23T05:31:39.898Z">
 <meta property="article:author" content="HyoukaRin">
 <meta property="article:tag" content="Interview">
 <meta property="article:tag" content="Rendering">
@@ -120,7 +120,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/03/23/interview2/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/03/23/interview3/"/>
 
 
 
@@ -253,7 +253,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/23/interview2/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/23/interview3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="HyoukaRin">
@@ -364,34 +364,39 @@
       
 
       
-        <h1 id="这是一篇伪面经"><a href="#这是一篇伪面经" class="headerlink" title="这是一篇伪面经"></a>这是一篇伪面经</h1><p>前些天TX一面的面试官来面我，我明明在简历上写满了CV和Rendering的项目经历，结果问了我二十分钟的c++/系统/基础数据结构和算法，而且面的时候双方还有语言障碍（C++的map能叫map吗？），然后那面试官居然给我过了，实在是大好人，我打心眼里感谢这位做技术的兄弟。<br>今天就是二面了，我心想总不至于又来一个做技术的兄弟，我为数不多的c++/系统的知识已经被第一个面试官面得差不多了，真要又来个面技术的兄弟，那我就真得顾左右而言他了。</p>
-<h1 id="Rendering"><a href="#Rendering" class="headerlink" title="Rendering"></a>Rendering</h1><p>Rendering在之前已经准备得差不多了，今天写一些Rendering是对之前的补充</p>
-<h2 id="基于着色器的渲染管线"><a href="#基于着色器的渲染管线" class="headerlink" title="基于着色器的渲染管线"></a>基于着色器的渲染管线</h2><p>这是我那位好心的一面面试官问我的唯一一个跟渲染相关的问题，一般的渲染管线有三个着色器，顶点，几何，片段，在前期的（old-fashioned）opengl渲染管线中，由于显卡的限制，主要的着色是在顶点着色器中完成的，随着显卡功能的日渐增强，着色的过程从顶点转移到了片段（相比于顶点，片段着色器有着更高的着色精度），顶点在通过几何着色器的解释后，通过光栅化，将一系列的片段属性传给片段着色器，片段着色器经过复杂的着色过程后，再进行一系列的测试（深度，模板），最后将图片绘制到屏幕上</p>
-<h2 id="采样-反走样-傅里叶展开"><a href="#采样-反走样-傅里叶展开" class="headerlink" title="采样 反走样 傅里叶展开"></a>采样 反走样 傅里叶展开</h2><p>这是一般通过DD（下称PDD）曾经被问到的一个题目，为什么会出现走样，我们如何反走样？</p>
-<p>渲染的本质其实是对于渲染函数的一个采样，其实就是存在一个函数f(x,y)-&gt;(r,g,b)，我们对于离散的(x,y)找到对应的(r,g,b)，然后画到屏幕上。</p>
-<p>学习过傅里叶变换和函数空间的我们知道（其实我们早忘了），任何函数可以由周期性的基函数组合得到，就好像矩阵和基向量一样，那么，一个函数就有“高频”和“低频”的说法，渲染函数自然也不例外，因此，一个图像中将会存在高频和低频信息，低频也就是那些变化不大的区域，比如纯色的桌面，而高频也就是那些变化大的区域，比如说桌面的边缘。如果我们对于高频区域采样不足，那么很容易出现锯齿状的条纹，或者闪烁的纹理贴图，Mipmap可以帮助我们处理贴图的问题，而AA则通过重采样帮助我们解决锯齿状的条纹</p>
-<h2 id="SM与AO"><a href="#SM与AO" class="headerlink" title="SM与AO"></a>SM与AO</h2><p>PDD在跟小老板讨论可微渲染的时候说应该可微AO来进行可微的阴影渲染，其实AO跟可微渲染的目标并不一致</p>
-<p>Phong光照模型中，有三种光照的方式，分别是环境，漫反射和反射，环境光的阴影可以用AO来实现，而漫反射和反射则利用SM，如果我们希望通过可微渲染来达到光源的回归，那么AO其实根本做不到这一点</p>
-<p>相对的，AO可以帮我们回归一些有趣的几何信息，因为AO的计算是通过local的几何遮挡进行量化的</p>
-<h2 id="渲染的几个空间"><a href="#渲染的几个空间" class="headerlink" title="渲染的几个空间"></a>渲染的几个空间</h2><p>我觉得这是个很基础的问题，PDD居然没有被问到，可能是因为PDD的面试官真的好心吧</p>
-<p>弄清楚渲染的几个空间和对应的变换对于正确地完成渲染是非常重要的，尤其是对于延迟渲染</p>
-<p>总得而言，渲染有这些空间</p>
-<ul>
-<li><strong>model space</strong></li>
-<li><strong>world space</strong></li>
-<li><strong>view space</strong></li>
-<li><strong>clip space</strong></li>
-<li><strong>NDC space</strong></li>
-<li><strong>screen space</strong></li>
-<li><strong>texture space</strong></li>
-</ul>
-<p>模型的三角形定义是在model space中定义的，通过一系列自定义的变换（平移，旋转，切变，对称）我们最终到达了world space</p>
-<p>view space是将所有的世界空间中的物体转移到以相机为原点，相机朝向为坐标的空间中，尽管我们在world space中就已经可以完成着色，大部分的着色是在view space中进行的</p>
-<p>clip space 相机具有成像平面，在进过投影矩阵后，所有的在view space中的物体被投影到成像平面中，opengl会在这一过程中裁剪掉在成像平面外的片段，因此其被称为clip space</p>
-<p>NDC space为了方便，clip space中的坐标会除以齐次坐标，这样带来的好处在于所有的(x,y,z)分量将会保持在[-1,1]之间</p>
-<p>texture space则是将NDC space中的所有坐标乘以0.5再加上0.5，因为这样可以与纹理坐标的范围[0,1]对应，值得注意的是，深度缓冲，也即z-buffer中的深度值就是在texture space中</p>
-<p>screen space，很多时候称为SS（我也喜欢这个名字），是指所有的变换结束后呈现在观众眼中的空间，这个空间一般来说不涉及什么变换，只是为了给算法取名字方便，比如什么SSAA,SSAO</p>
-<p>还有一个TBN space，其实是为了正确应用法线贴图而产生的空间，我们需要将法线贴图转移到面所在的切线空间，就需要TBN矩阵</p>
+        <h1 id="也许这是真正意义上的面经"><a href="#也许这是真正意义上的面经" class="headerlink" title="也许这是真正意义上的面经"></a>也许这是真正意义上的面经</h1><p>本来早就该动笔写这篇“读后感”一般的面经，结果却一直缺少动笔的决心和理由，趁今天难得的早起教小学生的闲暇，况且pdd下周一还要接受tx变态面试官的面试，我决定把这个拖了有三个星期的坑填上</p>
+<p>这次的面经将包含一些我总结出的“Golden Rule”，以及一些计算机，游戏渲染方面需要关注的点，以及一些关于面试的杂谈</p>
+<h1 id="Golden-Rule"><a href="#Golden-Rule" class="headerlink" title="Golden Rule"></a>Golden Rule</h1><p>反正看到这篇面经的都是自己人，名字叫得多大也无所谓吧</p>
+<h2 id="You-are-how-you-read"><a href="#You-are-how-you-read" class="headerlink" title="You are how you read"></a>You are how you read</h2><p>这个题目借用了沈向阳博士前些天演讲的题目。你的简历不仅是你的面试官对于你的第一印象，同时也是他面试你时所能使用的关于你的唯一资料。可以说，你是那个为自己的面试制作地图的人。冒险者自己制作地图，这样的rpg难道还能输？</p>
+<p>当然有可能，比如说一个为自己制作了地狱难度地图的冒险者，或者一个不按套路出牌的AI（面试官）。</p>
+<p>话虽这么说，大部分面试官还是按照套路出牌的，因此，制定一张优秀的地图，让你和你的面试官在面试之后有着舒适的面试体验是非常有必要的，也许这就是你通过面试的关键。</p>
+<p>总之，简历是至关重要的，想要给面试官留下怎样的印象，如何提前规划你的面试（真正的面试在面试之前就就开始了），这一切都取决于你的简历。</p>
+<h2 id="永远不要和盘托出"><a href="#永远不要和盘托出" class="headerlink" title="永远不要和盘托出"></a>永远不要和盘托出</h2><p>我也忘了我在哪看到这句话，大概是这样</p>
+<p>“在爱情中，坦诚相待是必要的，但是永远不要和盘托出”</p>
+<p>在你的简历中也是这样</p>
+<p>在写简历的时候你大概会有这样的困扰：</p>
+<p>“简历上没什么好填的啊，自己既没项目经历，也没实习经历，在大学里从头混到尾，除了考试啥也没干，简历该怎么写呢？难道写自己兴趣爱好是打游戏吗？我李白超帅的。”</p>
+<p>不要慌，我也这样困扰过，而且，要知道，即便你啥经历也没写，你也有被面试的机会，相反，如果你在你的简历里面胡吹海吹，那么你的面试官总可以找到一堆细节来问你，到时候即便你答出来了，面试官也觉得你也只是简历上写的那样，马马虎虎，更何况你很可能答不出来。</p>
+<p>永远别在简历上胡吹海吹，把胡吹海吹的机会留到面试的时候。</p>
+<p>当然，你好歹得在简历上写点东西，毕竟这是你的面试时的地图，如果你确实有项目经历，那你确实可以写你在项目里干了什么，用了什么方法。如果你真的非常可怜，啥经历也没有，那你可以写写你平时做的大作业，你在应付考试的时候做的有趣的事情，当然，这些要面向你面试的岗位。</p>
+<p>简历中的废话除了让你的简历排版变得好看之外一般没什么用，控制你的简历中废话的数量，面试官一般只会挑一些他们感兴趣的来问你，因此，你可以写一些与岗位无关的，显得你牛逼的废话；同时留下一些面试官熟悉的，可以问你的，让你和面试官有话可聊。</p>
+<h2 id="认识你自己"><a href="#认识你自己" class="headerlink" title="认识你自己"></a>认识你自己</h2><p>伟大的柏拉图在两千多年前提出了这样一句伟大的口号：“认识你自己！”</p>
+<p>面试的时候也是这样的，对于面试时面试官提到的问题，以及你的简历的经历，你都最好对他们进行一个评估：我对于这些到底有多少了解？</p>
+<p>在我看来，认识有这么几个层次</p>
+<p>1.啥也不懂，听都没听说过：比如我对于编程范式，什么工厂模型什么的，一点都不懂，两次被面试官问到。其实这种啥也不懂的对于面试影响不怎么大，对于那些你不怎么懂的问题，你大可以懂装不懂。面试官允许你有不懂的方面，只要你别太过分，让面试官觉得你在捉弄他就行</p>
+<p>2.懂个大概，知道个原理，没有实际写过或者做过：比如我对于操作系统，网络，分布式等概念，只停留在上课听说过的程度，回答这种问题是要比较小心，尽量挑自己确定的回答，如果你比较深入了解某一个方面可以说说，但是切记点到为止。</p>
+<p>3.知道原理而且写过代码，做过实验：比如我对于光栅化成像，opengl等概念。如果你确实做过一些实验，比如训练个神经网络，跑个什么并行程序，那么都可以归结为这个层次。这些东西可以多说，你平时是怎么做的，而且因为你写过代码，所以回答起来一般都不慌。</p>
+<p>4.做过实验并且深入了解其它相关方法：这些可以说是联想，也是你可以胡吹海吹的地方，比如说面试官跟你提到云，雨等介质，你可以vol light rendering，ray marching，delta tracking balabala讲一堆，或者说他提到path tracing，软阴影，然后你可以guiding path tracing，光场表征，stat统计又讲一堆。比如说人工智能，目标检测领域，你大吹特吹你对于attention，multi task，residual connection，数据增强等等概念的理解。这些是让你跟你的面试官消磨时光的利器，当然，可以胡吹海吹依赖于你对这些概念的理解。</p>
+<h1 id="All-about-those-tricks"><a href="#All-about-those-tricks" class="headerlink" title="All about those tricks"></a>All about those tricks</h1><p>面试的时候有一些东西需要积累，比如算法，数据结构，闲得无聊的时候，请啃啃算法导论吧。面试官有时候会提一点基础问题上稍微变换一下的问题，不要被吓到，讲一个naive的解决方案也算解决方案，没有问题。除此之外，还有一些套路是可以准备的。</p>
+<h2 id="虚函数"><a href="#虚函数" class="headerlink" title="虚函数"></a>虚函数</h2><p>只要你提c++，面试官就会问这个——这个是固定套路，建议你弄懂大部分细节，包括有没有虚函数的类的大小，什么时候虚函数表被扩充，什么时候虚函数表被覆盖</p>
+<p>如果你学过编译原理，你可以从编译原理的角度考虑这个问题：c++语言只规定了虚函数的作用方式，并没有规定实现方法，如果你是编译器的制作者，你会怎样设计这个编译器来完成虚函数的功能？思考这个问题其实蛮有意思的，如果能从这个角度回答，面试官一定对你刮目相看</p>
+<h2 id="智能指针"><a href="#智能指针" class="headerlink" title="智能指针"></a>智能指针</h2><p>这个也是固定套路，可以看看c++ primer plus，里面的回答比较丰富，足可以让你应付面试官</p>
+<p>网易的面试官问了我个有趣的，套路之外的问题：shared_ptr的循环引用，这个问题其实蛮有意思的，其本质是垃圾回收机制的两种实现方法：引用计数与可达性判断，以及引用计数所蕴含的问题。如果你能从gc的两种方法回答这个问题，面试官应该会很开心的。</p>
+<h2 id="领域知识"><a href="#领域知识" class="headerlink" title="领域知识"></a>领域知识</h2><p>我只能说说rendering方面的，其实不外乎opengl有几个着色器，opengl中的空间变换，phong光照模型，法贴与tbn矩阵，mipmap原理与level确定，抗锯齿等，这些是面试官的考题，也是你发挥的空间，如果你好好看了games101，你不仅可以完美回答这些问题，你还可以在谈phong的时候讲辐射度量学，光栅化与光追的关系，在谈mipmap的时候谈各向异性过滤，谈抗锯齿的时候谈频域，卷积，sampling pattern，这些应该也够hr们喝一壶了。</p>
+<h1 id="杂谈与ACK"><a href="#杂谈与ACK" class="headerlink" title="杂谈与ACK"></a>杂谈与ACK</h1><p>首先要感谢giria，pdd，Ebifly，椰浆跟我聊天，分享面试经历，现在，giria已经收到offer，Ebifly应该阿里算法稳了，pdd明天tx面试，希望这篇面经可以帮到pdd和椰浆，也祝大家都可以收到offer，面试顺利。</p>
+<p>大部分面试的经历都不怎么好，比如giria被无数面试官放了鸽子，还被讨厌的面试官欺负不好还口，pdd过了一面然后又灰了，椰浆面完一个多月了没啥答复，我也有被tx面试官欺负的经历。</p>
+<p>大家要是遇到了糟糕的面试经历不要伤心，就像有那种专门搞面试官，不在意offer的面试者一样，面试官的心态也有好有坏的，有些不那么“职业”的面试官总能想办法搞你一手，问你点奇怪题目，刁难刁难你，（“我最喜欢在面试的时候干人”，SuwakoZhai如是说）遇到这种面试官不要慌张，在掌握尺度的情况下好好回答，不要输了气势就行。</p>
+<p>就算没有收到offer，暑假也可以好好玩，还可以做自己喜欢做的事情，失之东隅收之桑榆，不见得糟糕啦。</p>
 
       
     </div>
@@ -424,8 +429,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/03/21/interview1/" rel="next" title="面试1">
-                <i class="fa fa-chevron-left"></i> 面试1
+              <a href="/2020/03/23/interview2/" rel="next" title="面试2">
+                <i class="fa fa-chevron-left"></i> 面试2
               </a>
             
           </div>
@@ -434,8 +439,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/03/23/interview3/" rel="prev" title="面试2">
-                面试2 <i class="fa fa-chevron-right"></i>
+              <a href="/2020/03/27/PiontRend/" rel="prev" title="PiontRend">
+                PiontRend <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -575,7 +580,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#这是一篇伪面经"><span class="nav-number">1.</span> <span class="nav-text">这是一篇伪面经</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Rendering"><span class="nav-number">2.</span> <span class="nav-text">Rendering</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基于着色器的渲染管线"><span class="nav-number">2.1.</span> <span class="nav-text">基于着色器的渲染管线</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#采样-反走样-傅里叶展开"><span class="nav-number">2.2.</span> <span class="nav-text">采样 反走样 傅里叶展开</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SM与AO"><span class="nav-number">2.3.</span> <span class="nav-text">SM与AO</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#渲染的几个空间"><span class="nav-number">2.4.</span> <span class="nav-text">渲染的几个空间</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#也许这是真正意义上的面经"><span class="nav-number">1.</span> <span class="nav-text">也许这是真正意义上的面经</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Golden-Rule"><span class="nav-number">2.</span> <span class="nav-text">Golden Rule</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#You-are-how-you-read"><span class="nav-number">2.1.</span> <span class="nav-text">You are how you read</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#永远不要和盘托出"><span class="nav-number">2.2.</span> <span class="nav-text">永远不要和盘托出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#认识你自己"><span class="nav-number">2.3.</span> <span class="nav-text">认识你自己</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#All-about-those-tricks"><span class="nav-number">3.</span> <span class="nav-text">All about those tricks</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#虚函数"><span class="nav-number">3.1.</span> <span class="nav-text">虚函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#智能指针"><span class="nav-number">3.2.</span> <span class="nav-text">智能指针</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#领域知识"><span class="nav-number">3.3.</span> <span class="nav-text">领域知识</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#杂谈与ACK"><span class="nav-number">4.</span> <span class="nav-text">杂谈与ACK</span></a></li></ol></div>
             
 
           </div>
